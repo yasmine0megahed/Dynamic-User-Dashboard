@@ -1,2 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+
+:root{
+    --color1:#700a6e;
+    --color2:#944991;
+    --color3:#b77cb5;
+    --color4:#dbafd9;
+    --color5:#ffe3fe;
+    --linearPrimarySecondary: linear-gradient(#0587eb, #030891);
+    --linearPrimaryAccent: linear-gradient(#0587eb, #2203b0);
+    --linearSecondaryAccent: linear-gradient(#030891, #2203b0);
+    --radialPrimarySecondary: radial-gradient(#0587eb, #030891);
+    --radialPrimaryAccent: radial-gradient(#0587eb, #2203b0);
+    --radialSecondaryAccent: radial-gradient(#030891, #2203b0);
+}
+
+
+
+

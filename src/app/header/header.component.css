@@ -4,6 +4,87 @@
     margin-right: 5px;
 }
 .title-edit{
-    font-weight: 900;
+    font-weight:700;
+    font-size: 20px;
     margin-top: 20px;
+    color: var(--color5);
 }
+.nav-edit{
+    background: var(--color2);
+}
+
+
+
+  /* ////////////////search edit start/////////////////////// */
+  input::placeholder {
+    color: var(--color5) 
+  }
+  .ui-input-container {
+    position: relative;
+    width: 300px;
+
+  }
+  
+  .ui-input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 2px solid var(--color5);
+    outline: none;
+    background-color: transparent;
+    transition: border-color 0.3s;
+    color: var(--color5);
+  }
+  
+  .ui-input:focus {
+    border-color: var(--color3);
+  }
+  
+  .ui-input-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color3);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+  
+  .ui-input:focus + .ui-input-underline {
+    transform: scaleX(1);
+  }
+  
+  .ui-input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color:rgba(255, 227, 254, 0.1);
+    transition: width 0.3s;
+  }
+  
+  .ui-input:focus ~ .ui-input-highlight {
+    width: 100%;
+  }
+  
+  .ui-input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color5);
+    transition: color 0.6s;
+  }
+  
+  .ui-input:focus ~ .ui-input-icon {
+    color: var(--color1);
+  }
+  
+  .ui-input-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  /* ////////////////search edit end/////////////////////// */ 
