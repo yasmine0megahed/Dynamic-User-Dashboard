@@ -1,8 +1,31 @@
-.example-card {
-    max-width: 400px;
-  }
+ .card-edit {
+    width: 270px;
+    background-color: var(--color5);
+    color:var(--color1);
+  } 
   
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+.container-card-edit{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.container-card-edit:hover{
+  transform: scale(1.1) ;
+
+}
+.card-edit{
+width: 100%;
+}
+
+.view-edit{
+  color: var(--color5)!important;
+  background: var(--color3);
+}
+@media only screen and (max-width: 625px) { 
+
+  .card-edit{
+    width: 96%;
+    margin: auto;
+    }
+}
