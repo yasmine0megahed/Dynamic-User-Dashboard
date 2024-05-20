@@ -28,7 +28,7 @@ width: 100%;
 @media only screen and (max-width: 625px) { 
 
   .card-edit{
-    width: 92%;
+    width: 90%;
     margin: auto;
     }
 }

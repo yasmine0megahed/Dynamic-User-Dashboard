@@ -1,7 +1,8 @@
-<!-- navbar start -->
-<nav class="navbar nav-edit">
+<!-- <div class="container-fluid "> -->
+    <!-- navbar start -->
+    <nav class="navbar nav-edit">
 
-    <div class="container ">
+
         <!-- logo start -->
         <a class="navbar-brand nav-edit1" routerLink="/">
             <div> <img src="../../assets/img/teamwork.png" alt="logo" class="logo-edit">
@@ -12,28 +13,22 @@
         <!-- search box start -->
         <form class="d-flex mx-auto" role="search">
             <div>
-            <div class="ui-input-container">
-                <input placeholder="Type something..." 
-                class="ui-input" type="text"
-                 [(ngModel)]="searchText" name="searchText" 
-                 (keyup)="onKeyup()"/>
-                <div class="ui-input-underline"></div>
-                <div class="ui-input-highlight"></div>
-                <div class="ui-input-icon">
-                    <i class="bi bi-search"></i>
+                <div class="ui-input-container">
+                    <input placeholder="Type something..." class="ui-input" type="text" [(ngModel)]="searchText"
+                        name="searchText" (keyup)="onKeyup()" />
+                    <div class="ui-input-underline"></div>
+                    <div class="ui-input-highlight"></div>
+                    <div class="ui-input-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+                </div>
+                <div (click)="search()" class="search-result">
+
                 </div>
             </div>
-            <div (click)="search()"  class="search-result">
-
-            </div>
-        </div>
         </form>
         <!-- search end -->
-    </div>
-</nav>
-<!-- navbar end -->
 
-
-
-
-
+    </nav>
+    <!-- navbar end -->
+<!-- </div> -->
