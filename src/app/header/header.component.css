@@ -13,6 +13,7 @@
   background: var(--color2);
   height: 70px;
   overflow: visible;
+  width: 100%;
 }
 .nav-edit1 {
   align-self: flex-start;
