@@ -22,10 +22,13 @@ width: 100%;
   color: var(--color5)!important;
   background: var(--color3);
 }
+/* .row-edit{
+  width: 100%;
+} */
 @media only screen and (max-width: 625px) { 
 
   .card-edit{
-    width: 96%;
+    width: 92%;
     margin: auto;
     }
 }
