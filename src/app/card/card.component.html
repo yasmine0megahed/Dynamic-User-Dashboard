@@ -4,20 +4,18 @@
 <app-header></app-header>
 <!-- navbar end-->
     <!-- user card start -->
-
     <div class="container text-center m-auto">
         <div data-aos="fade-up" data-aos-duration="1500"> <!--AOS Library -->
             <!-- users loop cards start-->
             <div class="row  m-auto">
                 @for (user of users; track $index) {
                 <div class="col-lg-4  col-md-6  col-sm-12 container-card-edit ">
-
                     <mat-card class="card-edit">
                         <mat-card-header>
                             <!-- personal img -->
                             <img mat-card-avatar [src]="user.avatar" alt="personal img">
                             <!-- first and last name -->
-                            <mat-card-title>{{ user.first_name }} {{ user.last_name }}</mat-card-title>
+                            <mat-card-title style="padding-top: 10px;">{{ user.first_name }} {{ user.last_name }}</mat-card-title>
                         </mat-card-header>
                         <!-- view button -->
                         <div class="m-auto ">
@@ -26,13 +24,11 @@
                             </mat-card-actions>
                         </div>
                     </mat-card>
-
                 </div>
                 }
                 <!-- users loop cards end-->
             </div>
         </div>
-
         <!-- user card end -->
     </div>
 </div>
