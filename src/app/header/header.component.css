@@ -39,7 +39,7 @@ input::placeholder {
 }
 .ui-input-container {
   position: relative;
-  width: 300px;
+  /* width: 300px; */
 }
 
 .ui-input {
@@ -104,4 +104,16 @@ input::placeholder {
   width: 20px;
   height: 20px;
 }
+@media only screen and (max-width: 625px) {
+  /* .ui-input ,.ui-input-underline ,.ui-input:focus ~ .ui-input-highlight{
+    width: 50%;
+  } */
+  .ui-input-container{
+    width: 130px;
+  }
+  .ui-input {
+
+    font-size: 10px;}
+}
+
 /* ////////////////search design end/////////////////////// */
