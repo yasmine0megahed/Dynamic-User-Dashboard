@@ -25,12 +25,12 @@ export class HeaderComponent {
     const pageNumbers = [1, 2];
     forkJoin(pageNumbers.map((page) => this.userService.listUsers(page)))
       .pipe(
-        map((responses: any[]) => {
-          return responses.map((response) => response.data).flat(); //Returns a new array with all sub-array elements
+        map((responses?: any[]) => {
+          return responses?.map((response) => response.data).flat(); //Returns a new array with all sub-array elements
         })
       )
       .subscribe({
-        next: (responses: any) => {
+        next: (responses?: any) => {
           this.users = responses; //array of user data
         },
         error: (error) => {

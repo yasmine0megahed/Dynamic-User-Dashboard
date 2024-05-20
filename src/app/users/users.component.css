@@ -1,18 +1,29 @@
-.img-edit{
-    padding: 10px;
+.img-edit {
+  padding: 10px;
 }
-.container-edit{
-    margin-top: 20px;
-    background: var(--color5);
-    border: solid var(--color2) 5px;
+.container-edit {
+  margin-top: 20px;
+  background: var(--color5);
+  border: solid var(--color2) 5px;
 }
-.title{
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--color1);
+.title {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color1);
 }
-.answer{
-    font-weight: 400;
-    font-size: 14px;
-    color: var(--color2);
+.answer {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color2);
+}
+.btn-edit2 {
+  color: var(--color5) !important;
+  background: var(--color3);
+  width: 16rem;
+  font-size: 20px;
+}
+.btn-edit1 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }

@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';//get data from url
+import { ActivatedRoute, RouterLink } from '@angular/router';//get data from url
 import { UsersService } from '../services/users.service';//api service
 import { forkJoin } from 'rxjs'; //to join 2 pages
 import { map } from 'rxjs/operators';
 import { HeaderComponent } from '../header/header.component';
+import { MatButtonModule } from '@angular/material/button'; //angular matrial
+import { MatCardModule } from '@angular/material/card'; //angular matrial
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';//angular matrial
+import { LoaderComponent } from '../loader/loader.component';
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent,MatButtonModule,MatCardModule,MatSlideToggleModule,RouterLink,LoaderComponent],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })
@@ -22,20 +26,20 @@ constructor(
 ){}
   ngOnInit(): void {
     this.userId = this.activatedRoute.snapshot.params['id']; //get data from url
-    console.log(this.userId)
+    // console.log(this.userId)
     const pageNumbers = [1, 2];
     forkJoin(pageNumbers.map((page) => this.userService.listUsers(page)))
       .pipe(
-        map((responses: any[]) => {
-          return responses.map((response) => response.data).flat(); //Returns a new array with all sub-array elements
+        map((responses?: any[]) => {
+          return responses?.map((response) => response.data).flat(); //Returns a new array with all sub-array elements
         }),
-        map((users: any[]) => {
-          return users.find(user => user.id === parseInt(this.userId)); // Find the user with matching ID
+        map((users?: any[]) => {
+          return users?.find(user => user.id === parseInt(this.userId)); // Find the user with matching ID
         })
       )
       .subscribe({
-        next: (responses: any) => {
-          console.log('API responses:', responses);
+        next: (responses?: any) => {
+          // console.log('API responses:', responses);
           this.user = responses; //user data
         },
         error: (error) => {

@@ -8,6 +8,7 @@ import { forkJoin } from 'rxjs'; //to join 2 pages
 import { map } from 'rxjs/operators';
 
 import { Router } from '@angular/router'; // navigate 
+import { LoaderComponent } from '../loader/loader.component';
 
 @Component({
   selector: 'app-card',
@@ -17,6 +18,7 @@ import { Router } from '@angular/router'; // navigate
     MatCardModule,
     MatButtonModule, //angular matrial
     HeaderComponent, //navbar component
+    LoaderComponent
   ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
