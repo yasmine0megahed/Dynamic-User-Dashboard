@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from '../header/header.component';
 import { MatButtonModule } from '@angular/material/button'; //angular matrial
 import { MatCardModule } from '@angular/material/card'; //angular matrial
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { UsersService } from '../services/users.service';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';//angular matrial
+import { UsersService } from '../services/users.service'; //api service
 import { forkJoin } from 'rxjs'; //to join 2 pages
 import { map } from 'rxjs/operators';
-import { HeaderComponent } from '../header/header.component';
+
+import { Router } from '@angular/router'; // navigate 
 
 @Component({
   selector: 'app-card',
@@ -23,7 +25,10 @@ export class CardComponent {
   //variables
   users: any;
   //constractor
-  constructor(private userService: UsersService) {}
+  constructor(private userService: UsersService, //api service
+    private router: Router, // navigate 
+
+  ) {}
 
   ngOnInit() {
     const pageNumbers = [1, 2];
@@ -35,7 +40,6 @@ export class CardComponent {
       )
       .subscribe({
         next: (responses: any) => {
-          console.log('API responses:', responses);
           this.users = responses; //array of user data
         },
         error: (error) => {
@@ -45,7 +49,7 @@ export class CardComponent {
   }
 
   //functions
-  viewUser(user: any) {
-    console.log(user);
+  viewUser(id: any) {
+    this.router.navigate([`details`,id]); // navigate 
   }
 }

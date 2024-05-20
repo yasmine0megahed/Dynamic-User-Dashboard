@@ -1,1 +1,56 @@
-<p>users works!</p>
+<div style="background: var(--color4);height: 100vh;">
+    <!--navbar start-->
+    <app-header></app-header>
+    <!--navbar end-->
+    <!--user details start-->
+    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <div class="d-flex justify-content-center ">
+        <div class="card container-edit" style="width: 18rem;">
+            <!--img-->
+            <div class="img-edit">
+                <img [src]="user.avatar" class="card-img-top" alt="profile img">
+            </div>
+            <!--id-->
+            <div class="card-body">
+                <div class="card-title">
+                    <span class="title">
+                        User ID:
+                    </span>
+                    <span class="answer">
+                        {{user.id }}
+                    </span>
+                </div>
+                <!--First Name-->
+                <div class="card-title">
+                    <span class="title">
+                        First Name:
+                    </span>
+                    <span class="answer">
+                        {{user.first_name }}
+                    </span>
+                </div>
+                <!-- Last Name-->
+                <div class="card-title">
+                    <span class="title">
+                        Last Name:
+                    </span>
+                    <span class="answer">
+                        {{user.last_name }}
+                    </span>
+                </div>
+                <!--Email-->
+                <div class="card-text">
+                    <span class="title">
+                        Email:
+                    </span>
+                    <span class="answer">
+                        {{user.email }}
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--user details end-->
+</div>

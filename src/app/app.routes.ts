@@ -1,18 +1,19 @@
 import { Routes } from '@angular/router';
 import { CardComponent } from './card/card.component';
+import { UsersComponent } from './users/users.component';
 
 export const routes: Routes = [
     { 
         path:'',
          component : CardComponent,
-         title:'Home page'
+        //  title:'Home page'
         },
          
      
-    // {
-    //     path:'login',
-    //     component:LoginComponent,
-    //     title:'login page'
-    // }
+    {
+        path:'details/:id',
+        component:UsersComponent,
+        // title:'login page'
+    }
 
 ];
