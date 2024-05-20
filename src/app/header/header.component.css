@@ -13,7 +13,7 @@
   background: var(--color2);
   height: 70px;
   overflow: visible;
-  width: 100%;
+  /* width: 100vw; */
 }
 .nav-edit1 {
   align-self: flex-start;
@@ -40,7 +40,7 @@ input::placeholder {
 }
 .ui-input-container {
   position: relative;
-  /* width: 300px; */
+  width: 300px;
 }
 
 .ui-input {
